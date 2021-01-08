@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar/>
       <div className="content">
         <h1>{title}</h1>
         <p>liked {likes} of times</p>
