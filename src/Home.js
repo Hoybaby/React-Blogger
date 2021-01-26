@@ -8,6 +8,7 @@ function Home() {
 
     const handleClick = () => {
         setName('luigi');
+        setAge('30')
     }
 
     // const handleClickAgain = (name, e) => {
