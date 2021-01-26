@@ -14,7 +14,7 @@ function Home() {
         <div className="home">
             <h2>Homepage</h2>
             <button onClick={handleClick}>Click Me</button>
-            <button onclick={handleClickAgain}>Click me again</button>
+            <button onclick={() => {handleClickAgain('mario')}}>Click me again</button>
         </div>
     )
 }
