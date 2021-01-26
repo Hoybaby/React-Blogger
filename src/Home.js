@@ -6,6 +6,7 @@ function Home() {
 
     const handleClick = (e) => {
         name = 'luigi';
+        console.log(name)
     }
 
     // const handleClickAgain = (name, e) => {
