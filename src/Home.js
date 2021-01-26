@@ -7,14 +7,14 @@ function Home() {
     }
 
     const handleClickAgain = (name) => {
-        console.log( "hello" + name);
+        console.log( "hello " + name);
     }
 
     return (
         <div className="home">
             <h2>Homepage</h2>
             <button onClick={handleClick}>Click Me</button>
-            <button onclick={() => {handleClickAgain('mario')}}>Click me again</button>
+            <button onClick={() => {handleClickAgain('mario')}}>Click me again</button>
         </div>
     )
 }
