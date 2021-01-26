@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 function Home() {
 
-    let name = 'mario';
+    // let name = 'mario';
     const [name, setName] = useState('mario');
 
-    const handleClick = (e) => {
-       
+    const handleClick = () => {
+        setName('luigi');
     }
 
     // const handleClickAgain = (name, e) => {
