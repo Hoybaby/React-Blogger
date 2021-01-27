@@ -13,7 +13,7 @@ function Home() {
     return (
         <div className="home">
             {/* you can name blogs anything but then inside the curly is the actual PROP which has to be consistent with a variable name */}
-            <BlogList blogs={blogs}/> 
+            <BlogList blogs={blogs} title="All Blogs"/> 
         </div>
     )
 }
