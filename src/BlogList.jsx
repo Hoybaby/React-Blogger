@@ -1,9 +1,9 @@
 import React from 'react'
 
-const BlogList = (props) => {
+const BlogList = ({blogs, title}) => {
 
-    const blogs = props.blogs;
-    const title = props.title
+    // const blogs = props.blogs;
+    // const title = props.title
 
     // console.log(props,blogs);
 
