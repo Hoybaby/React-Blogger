@@ -14,6 +14,7 @@ function Home() {
         <div className="home">
             {/* you can name blogs anything but then inside the curly is the actual PROP which has to be consistent with a variable name */}
             <BlogList blogs={blogs} title="All Blogs"/> 
+            <BlogList blogs={blogs.filter((blog) => blog.author === 'mario' )} title="All Blogs"/> 
         </div>
     )
 }
