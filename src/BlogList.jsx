@@ -1,9 +1,10 @@
 import React from 'react'
 
-function BlogList() {
+const BlogList = (props) => {
 
+    const blogs = props.blogs;
 
-    
+    console.log(props,blogs);
     return (
         <div className="blog-list">
             {blogs.map((blog) => (
@@ -16,4 +17,4 @@ function BlogList() {
     )
 }
 
-export default BlogList
+export default BlogList;
