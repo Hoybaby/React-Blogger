@@ -9,6 +9,9 @@ function Home() {
         { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
     ]);
 
+
+    const [name, setName] = useState('mario');
+
     const handleDelete = (id) => {
         
         //this doesnt change the orginal data, only returns new filtered array.
@@ -19,13 +22,15 @@ function Home() {
 
     useEffect(() => {
         console.log('use effect ran');
-        console.log(blogs)
-    })
+        console.log(name);
+    }, [name])
 
     return (
         <div className="home">
             {/* you can name blogs anything but then inside the curly is the actual PROP which has to be consistent with a variable name */}
             <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/> 
+            <button onClick={() => setName('luigi')}>change name</button>
+            <p>{name}</p>
         </div>
     )
 }
