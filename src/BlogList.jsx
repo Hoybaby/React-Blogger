@@ -1,11 +1,12 @@
 import React from 'react'
 
-const BlogList = ({blogs, title}) => {
+const BlogList = ({blogs, title, handleDelete}) => {
 
     // const blogs = props.blogs;
     // const title = props.title
 
     // console.log(props,blogs);
+    
 
     return (
         <div className="blog-list">
@@ -14,6 +15,7 @@ const BlogList = ({blogs, title}) => {
                 <div className="blog-preview" key={blog.id}>
                     <h2>{blog.title}</h2>
                     <p>written by {blog.author}</p>
+                    <button onClick={() => handleDelete(blog.id)}>Delete blog</button>
                 </div>
             ))}
         </div>
