@@ -17,18 +17,23 @@ function Home() {
     }
 
     useEffect(() => {
-        console.log('use effect ran');
-        console.log(name);
-    }, [])
+        fetch('http://localhost:8000/blogs') //this will return a promise so i can then do
+            .then(res => {
+                return res.json() //this passes a json into an JS object for us
+            })
+            .then((data)=> { //data could be named anything. nothing to do with the blog file
+                console.log(data);
+            })
+    }, []);
 
     return (
         <div className="home">
             {/* you can name blogs anything but then inside the curly is the actual PROP which has to be consistent with a variable name */}
-            <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/> 
-            <button onClick={() => setName('luigi')}>change name</button>
-            <p>{name}</p>
+            {/* <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>  */}
+            {/* <button onClick={() => setName('luigi')}>change name</button> */}
+            {/* <p>{name}</p> */}
         </div>
     )
 }
 
-export default Home
+export default Home;
