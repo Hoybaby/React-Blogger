@@ -4,9 +4,8 @@ import BlogList from './BlogList.jsx';
 function Home() {
 
     const [blogs, setBlogs] = useState (null);
-
     const [isLoading, setisLoading] = useState(true);
-
+    const [error, setError] = useState(null)
 
     const [name, setName] = useState('mario');
 
@@ -19,7 +18,7 @@ function Home() {
     // }
 
     useEffect(() => {
-        fetch('http://localhost:8000/blogss') //this will return a promise so i can then do
+        fetch('http://localhost:8000/blogs') //this will return a promise so i can then do
             .then(res => {
                 console.log(res);
                 if(!res.ok) {
@@ -31,15 +30,18 @@ function Home() {
                 console.log(data);
                 setBlogs(data);
                 setisLoading(false);
+                setError(null);
             })
             .catch(err => {
-                console.log(err.message);
+                // console.log(err.message);
+                setError(err.message);
+                setisLoading(false);
             })
     }, []);
 
     return (
         <div className="home">
-
+            {error && <div>{error}</div>}
             {isLoading && <div>Loading...</div>}
             {/* you can name blogs anything but then inside the curly is the actual PROP which has to be consistent with a variable name */}
             {blogs && <BlogList blogs={blogs} title="All Blogs"/>} 
