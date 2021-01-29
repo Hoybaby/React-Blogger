@@ -23,13 +23,14 @@ function Home() {
             })
             .then((data)=> { //data could be named anything. nothing to do with the blog file
                 console.log(data);
+                setBlogs(data);
             })
     }, []);
 
     return (
         <div className="home">
             {/* you can name blogs anything but then inside the curly is the actual PROP which has to be consistent with a variable name */}
-            {/* <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>  */}
+            {blogs && <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>} 
             {/* <button onClick={() => setName('luigi')}>change name</button> */}
             {/* <p>{name}</p> */}
         </div>
