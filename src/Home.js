@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import BlogList from './BlogList.jsx';
+import useFetch from './useFetch.js';
 
 function Home() {
 
@@ -11,6 +12,7 @@ function Home() {
     //     setBlogs(newBlogs);
     // }
 
+    const { data: blogs, isLoading, error} = useFetch('http://localhost:8000/blogs')
 
     return (
         <div className="home">

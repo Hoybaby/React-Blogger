@@ -10,7 +10,7 @@ const useFetch = (url) => {
 
 
     useEffect(() => {
-        fetch() //this will return a promise so i can then do
+        fetch(url) //this will return a promise so i can then do
             .then(res => {
                 console.log(res);
                 if(!res.ok) {
