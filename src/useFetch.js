@@ -30,6 +30,9 @@ const useFetch = () => {
                 setisLoading(false);
             })
     }, []);
+
+
+    return { data, isLoading, error}
 }
 
 export default useFetch;
