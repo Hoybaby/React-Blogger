@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const useFetch = () => {
+const useFetch = (url) => {
 
     //changed blogs to data so it can be reusable later
     const [data, setData] = useState (null);
@@ -10,7 +10,7 @@ const useFetch = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:8000/blogs') //this will return a promise so i can then do
+        fetch() //this will return a promise so i can then do
             .then(res => {
                 console.log(res);
                 if(!res.ok) {
@@ -29,7 +29,7 @@ const useFetch = () => {
                 setError(err.message);
                 setisLoading(false);
             })
-    }, []);
+    }, [url]);
 
 
     return { data, isLoading, error}
