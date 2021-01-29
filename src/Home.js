@@ -5,16 +5,18 @@ function Home() {
 
     const [blogs, setBlogs] = useState (null);
 
+    const [isLoading, setisLoading] = useState(true);
+
 
     const [name, setName] = useState('mario');
 
-    const handleDelete = (id) => {
+    // const handleDelete = (id) => {
         
-        //this doesnt change the orginal data, only returns new filtered array.
-        //if true, it remains in the array, if false it is removed
-        const newBlogs = blogs.filter((blog => blog.id !== id));
-        setBlogs(newBlogs);
-    }
+    //     //this doesnt change the orginal data, only returns new filtered array.
+    //     //if true, it remains in the array, if false it is removed
+    //     const newBlogs = blogs.filter((blog => blog.id !== id));
+    //     setBlogs(newBlogs);
+    // }
 
     useEffect(() => {
         fetch('http://localhost:8000/blogs') //this will return a promise so i can then do
@@ -30,7 +32,7 @@ function Home() {
     return (
         <div className="home">
             {/* you can name blogs anything but then inside the curly is the actual PROP which has to be consistent with a variable name */}
-            {blogs && <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/>} 
+            {blogs && <BlogList blogs={blogs} title="All Blogs"/>} 
             {/* <button onClick={() => setName('luigi')}>change name</button> */}
             {/* <p>{name}</p> */}
         </div>
