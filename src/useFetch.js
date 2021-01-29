@@ -1,4 +1,14 @@
+import React, { useState, useEffect } from 'react'
+
 const useFetch = () => {
+
+    //changed blogs to data so it can be reusable later
+    const [data, setData] = useState (null);
+    const [isLoading, setisLoading] = useState(true);
+    const [error, setError] = useState(null)
+
+
+
     useEffect(() => {
         fetch('http://localhost:8000/blogs') //this will return a promise so i can then do
             .then(res => {
@@ -10,7 +20,7 @@ const useFetch = () => {
             })
             .then((data)=> { //data could be named anything. nothing to do with the blog file
                 console.log(data);
-                setBlogs(data);
+                setData(data);
                 setisLoading(false);
                 setError(null);
             })
@@ -21,3 +31,5 @@ const useFetch = () => {
             })
     }, []);
 }
+
+export default useFetch;
