@@ -10,7 +10,10 @@ const useFetch = (url) => {
 
 
     useEffect(() => {
-        fetch(url) //this will return a promise so i can then do
+
+        const abortCont = new AbortController();
+
+        fetch(url, {signal:abortCont.signal}) //this will return a promise so i can then do
             .then(res => {
                 console.log(res);
                 if(!res.ok) {
@@ -29,6 +32,8 @@ const useFetch = (url) => {
                 setError(err.message);
                 setisLoading(false);
             })
+
+            return() => abortCont.abort();
     }, [url]);
 
 

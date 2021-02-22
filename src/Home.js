@@ -18,6 +18,7 @@ function Home() {
         <div className="home">
             {error && <div>{error}</div>}
             {isLoading && <div>Loading...</div>}
+            
             {/* you can name blogs anything but then inside the curly is the actual PROP which has to be consistent with a variable name */}
             {blogs && <BlogList blogs={blogs} title="All Blogs"/>} 
             {/* <button onClick={() => setName('luigi')}>change name</button> */}
