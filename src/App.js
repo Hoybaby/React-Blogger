@@ -20,6 +20,9 @@ function App() {
             <Route exact path="/create">
               <Create/>
             </Route>
+            <Route exact path="/blogs/:id">
+              <Create/>
+            </Route>
           </Switch>
         </div>
       </div>
