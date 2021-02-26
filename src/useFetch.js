@@ -35,7 +35,8 @@ const useFetch = (url) => {
 
             return() => abortCont.abort();
     }, [url]);
-    
+
+    //this returns 3 values, the data we are trying to fetch, the value if true or false and an error if there is one.
     return { data, isLoading, error}
 }
 
