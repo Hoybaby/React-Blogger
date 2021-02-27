@@ -29,11 +29,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<<<<<<< HEAD
 This isn't very hard to do, all it takes is a couple of steps which can be shown in many tutorials with github pages. However when running a build folder, one needs to constantly erase and build when changes have been made.
-=======
-If changes are done to the project, a new build folder has to be created thus one must delete the old one for changes to occur in Github.
->>>>>>> 67d944f27a62630fe50c9eb685f5f9df4157b7a2
 
 ### `npm run eject`
 
@@ -47,7 +43,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### Running the Data for my code
 
-In order to grab the data I have used for testing in my code, one needs to run Npx json-server --watch data/db.json --port 8000. This will display the information to the website.
+In order to grab the data I have used for testing in my code, one needs to run npx json-server --watch data/db.json --port 8000. This will display the information to the website.
 
 
 ## Learn More
