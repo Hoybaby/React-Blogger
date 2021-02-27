@@ -1,8 +1,10 @@
 import React from 'react';
+import {useState} from 'react';
 
 const Create = () => {
 
     const [title, setTitle] = useState('');
+
     return (
         <div className="create">
             <h2>Add a New blog!</h2>
@@ -12,7 +14,7 @@ const Create = () => {
                 type="text"
                 required
                 value={title}
-                onChange={ () => setTitle(e.target.value)}
+                onChange={ (e) => setTitle(e.target.value)}
                 />
                 <label>Blog Body: </label>
                 <textarea 
@@ -23,6 +25,7 @@ const Create = () => {
                         <option value="mario">mario</option>
                         <option value="yoshi">yoshi</option>
                     </select>
+                    <button>Add Blog</button>
             </form>
         </div>
         );
