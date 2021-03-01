@@ -29,6 +29,12 @@
       "body": "hello",
       "author": "mario",
       "id": 5
+    },
+    {
+      "title": "Test for vlad",
+      "body": "testing for vlad",
+      "author": "mario",
+      "id": 6
     }
   ]
 }
