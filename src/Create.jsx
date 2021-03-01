@@ -12,7 +12,14 @@ const Create = () => {
 
         const blog = {title, body, author};
 
-        console.log(blog)
+        //second arguement is where we tack on the data but also define the type of request we sending.
+        fetch('http://localhost:8000/blogs', {
+        method: 'POST',
+        headers: {"Content-Type" : "application/json"},
+        body: JSON.stringify(blog)
+        }).then(() => {
+            console.log('new blog added')
+        })
     }
 
     return (
