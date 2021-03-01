@@ -17,6 +17,18 @@
       "body": "test1t",
       "author": "mario",
       "id": 3
+    },
+    {
+      "title": "Adding Blog Button",
+      "body": "Added a new feature about adding the blog",
+      "author": "mario",
+      "id": 4
+    },
+    {
+      "title": "Testing Push to other page",
+      "body": "hello",
+      "author": "mario",
+      "id": 5
     }
   ]
 }
