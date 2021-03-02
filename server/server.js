@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express();
-const mysql = require('mysql') 
+const mysql = require('mysql');
+const cors = require('cors');
+
+app.use(cors());
+app.use(express.json());
 
 const db = mysql.createConnection({
     user: 'root',
@@ -9,7 +13,11 @@ const db = mysql.createConnection({
     database: 'react_blogger'
 });
 
-app.post('/blogs', (req,res) => {
+app.get("/", (req,res) => {
+    res.send("hello world")
+})
+
+app.post('/create', (req,res) => {
     const title = req.body.title;
     const body = req.body.body;
     const author = req.body.author;
