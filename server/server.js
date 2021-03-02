@@ -1,13 +1,8 @@
-import * as express from 'express';
+const express = require('express')
+const app = express();
+const mysql = require('mysql') 
 
-import blogsDB from './db/blogsDB';
-
-import DB from './db';
-
-const router = express.Router();
-
-router.get('/api/blogs', async(req, res) => {
-    let blogs = await DB.Blogs.all
+app.listen(3001, () => {
+    console.log("Server is Working on 3001")
 })
 
-export default router;
