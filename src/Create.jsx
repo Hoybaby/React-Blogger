@@ -1,6 +1,8 @@
 import React from 'react';
 import {useState} from 'react';
 import {useHistory} from 'react-router-dom'
+import Axios from 'axios';
+import axios from 'axios';
 
 const Create = () => {
 
@@ -8,6 +10,14 @@ const Create = () => {
     const [body, setBody] =useState('');
     const [author, setAuthor] = useState('mario');
     const [ isPending, setIsPending] = useState(false)
+
+    const addBlog =() => {
+        axios.post('https://localhost:3001/create', 
+        {title: title,body: body,author: author})
+        .then(()=> {
+            console.log("success")
+        })
+    }
 
     //this is an object
     const history = useHistory();
