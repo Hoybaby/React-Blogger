@@ -17,7 +17,7 @@ app.get("/", (req,res) => {
     res.send("hello world")
 })
 
-app.post('/create', (req,res) => {
+app.post('/api/insert', (req,res) => {
     const title = req.body.title;
     const body = req.body.body;
     const author = req.body.author;

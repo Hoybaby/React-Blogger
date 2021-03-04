@@ -43,10 +43,22 @@
       "id": 7
     },
     {
-      "title": "test for database2",
-      "body": "test for database2",
+      "title": "test for database",
+      "body": "test for database",
       "author": "mario",
       "id": 8
+    },
+    {
+      "title": "test for database",
+      "body": "test for database",
+      "author": "mario",
+      "id": 9
+    },
+    {
+      "title": "test",
+      "body": "test",
+      "author": "Michael Bartek",
+      "id": 10
     }
   ]
 }

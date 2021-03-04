@@ -15,6 +15,17 @@ const Create = () => {
     //this is an object
     const history = useHistory();
 
+
+    const addBlog =() => {
+            axios.post('https://localhost:3001/api/insert', 
+            {title: title,
+            body: body,
+            author: author
+        }).then(()=> {
+                console.log("success")
+            })
+        }
+
     const handleSubmit =(e) => {
         e.preventDefault();
 
@@ -33,14 +44,7 @@ const Create = () => {
             history.push('/')
         })
 
-    const addBlog =() => {
-        axios.post('https://localhost:3001/create', 
-        {title: title,body: body,author: author})
-        .then(()=> {
-            console.log("success")
-        })
-    }
-
+    
     }
 
     return (
@@ -59,15 +63,15 @@ const Create = () => {
                 required
                 onChange={ (e) => setBody(e.target.value)}
                 ></textarea>
-                <label>Blog Aurthor: </label>
-                    <select
+                <label>Blog Author: </label>
+                    <input
+                    type="text"
+                    required
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                     >
-                        <option value="mario">mario</option>
-                        <option value="yoshi">yoshi</option>
-                    </select>
-                    {!isPending && <button>Add Blog</button>} 
+                    </input>
+                    {!isPending && <button onClick={addBlog}>Add Blog</button>} 
                     {isPending && <button disabled>Adding Blog...</button>}
                     <p>{title}</p>
                     <p>{body}</p>
