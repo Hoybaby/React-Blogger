@@ -15,9 +15,10 @@ const Create = () => {
     //this is an object
     const history = useHistory();
 
-
+    //this has to go backend
+    //
     const addBlog =() => {
-            axios.post('https://localhost:3001/api/insert', 
+            axios.post('/api/insert', 
             {title: title,
             body: body,
             author: author

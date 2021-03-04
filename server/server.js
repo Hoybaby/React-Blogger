@@ -3,8 +3,8 @@ const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
 
-app.use(cors());
-app.use(express.json());
+// app.use(cors());
+// app.use(express.json());
 
 const db = mysql.createConnection({
     user: 'root',
@@ -16,6 +16,10 @@ const db = mysql.createConnection({
 app.get("/", (req,res) => {
     res.send("hello world")
 })
+
+
+//test with postman
+//create modules
 
 app.post('/api/insert', (req,res) => {
     const title = req.body.title;
