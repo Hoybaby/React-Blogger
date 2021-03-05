@@ -18,7 +18,7 @@ const Create = () => {
     //this has to go backend
     //
     const addBlog =() => {
-            axios.post('/api/insert', 
+            axios.post('http://localhost:3001/create', 
             {title: title,
             body: body,
             author: author

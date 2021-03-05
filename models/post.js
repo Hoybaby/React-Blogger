@@ -16,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         author: {
             type: DataTypes.STRING,
-            defaultValue: "Personal",
+            allowNull: false
         },
     });
     return Post;

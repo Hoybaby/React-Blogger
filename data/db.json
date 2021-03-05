@@ -49,10 +49,16 @@
       "id": 8
     },
     {
+      "title": "test",
+      "body": "test",
+      "author": "test",
+      "id": 9
+    },
+    {
       "title": "test for database",
       "body": "test for database",
       "author": "mario",
-      "id": 9
+      "id": 10
     }
   ]
 }
